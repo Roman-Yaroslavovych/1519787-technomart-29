@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Roman Marusyn](https://up.htmlacademy.ru/htmlcss/29/user/1519787).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Савотиков](https://htmlacademy.ru/profile/id98316)
 
 ---
 
