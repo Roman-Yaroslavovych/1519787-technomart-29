@@ -25,6 +25,7 @@
     --producer-borders: #EAEAEA;
     --white-address:  #F3F7F9;
     --navigation-orange: #FFD180;
+    --footer-grey-blue:  rgba(50, 66, 92, 1);
 }
 
 .page-body{
@@ -358,8 +359,8 @@ background-color: var(--basic-dark-blue);
     line-height: 24px;
 }
 
-.main-footer-navigation{
-  background-color: var(--basic-dark-blue);
+.main-footer{
+  background-color: var( --footer-grey-blue);
 }
 
 .address{
