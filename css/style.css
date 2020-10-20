@@ -3,7 +3,7 @@
     --basic-dark-blue: #293449;
     --basic-grey: #888888;
     --basic-light-beige: #F9F5F0;
-    --basic-light-gray: #F1F5F7;
+    --basic-light-gray: #F2F6F8;
     --basic-dark-gray: #32425C;
     --button-red:  #EE3643;
     --button-active-red: #CA2C37;
@@ -25,6 +25,7 @@
     --white-address:  #F3F7F9;
     --navigation-orange: #FFD180;
     --footer-grey-blue:  rgba(50, 66, 92, 1);
+    --basic-greylight: #C5C5C5;
 }
 
 .page-body {
@@ -70,6 +71,14 @@ img {
 
 .checkout a {
     color: var(--basic-white); 
+}
+
+.checkout a:active {
+    color: var(--transparent);
+}
+
+.marks:active {
+    background-color: var(--button-eror-dark);
 }
 
 .main-logo:active {
@@ -411,3 +420,99 @@ img {
     font-size: 16px;
     line-height: 18px;
 }
+/*catalog*/
+
+.name {
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic-dark);
+}
+
+.name:hover {
+    color: var(--basic-dark);
+}
+
+.login-area {
+    list-style: none;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.area-item {
+    color: var(--basic-dark-gray);
+}
+
+.area-item:hover {
+    color: var(--button-red);
+}
+
+.name,
+.area-item:active {
+    color: var(--basic-greylight);
+}
+
+.bread-crumbs {
+    list-style: none;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+  
+  .crumbs {
+    color: var(--basic-dark);
+}
+  
+  .container h1 {
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    background-color: var(--basic-light-gray);
+}
+  
+  .pages-list {
+    font-size: 13px;
+    line-height: 18px;
+    list-style: none;
+}
+  
+  .pages-list a {
+    color: var(--basic-dark);
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+
+  .pages-list a:active {
+    border-color: var(--button-red);
+}
+  
+  .pages-list a:focus {
+    background-color: var(--button-red);  
+    border-color: var(--button-red);
+}
+  
+  .feedback a:hover {
+    text-decoration: underline;
+}
+  
+  .feedback a:active {
+   color: var(--button-red); 
+    text-decoration: none;
+}
+  
+  .social-button {
+    border-radius: 50%;
+    background: linear-gradient(0deg, #212A3A, #212A3A);
+}
+  
+  .social-button:hover {
+    border-radius: 50%;
+    background: var(--button-red);
+}
+  
+  .social-button:active {
+    border-radius: 50%;
+    background: var(--button-red);
+}
+  
+  
