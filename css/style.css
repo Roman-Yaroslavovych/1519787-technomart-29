@@ -162,7 +162,7 @@ img {
     background-color: var(--image-orange);
 }
 
-.offer-item-too {
+.offer-item-tool {
     background-color: var(--image-blue)
 }
 
@@ -187,7 +187,15 @@ img {
     color: var(--basic-white);
 }
 
+.slide-perforator {
+    background-image: url(../img/Layer\ 100.jpg);
+    background-repeat: no-repeat;
+}
 
+.slide-drill {
+    background-image: url(../img/Layer\ 99.jpg);
+    background-repeat: no-repeat;
+}
    
 .slider .arrows,
 .slider .dots {
@@ -298,6 +306,10 @@ img {
 .buttons-wrapper-marks:active {
     color: var(--old-price-gray);
     border-color: var(--old-price-gray);
+}
+
+.popular-producers-list {
+    list-style: none;
 }
 
 .popular-producers-item {
