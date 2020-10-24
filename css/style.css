@@ -188,12 +188,16 @@ img {
 }
 
 .slide-perforator {
-    background-image: url(../img/Layer\ 100.jpg);
+    width: 620px;
+    height: 266px;
+    background-image: url(../img/slide-perforator.jpg);
     background-repeat: no-repeat;
 }
 
 .slide-drill {
-    background-image: url(../img/Layer\ 99.jpg);
+    width: 620px;
+    height: 266px;
+    background-image: url(../img/slide-drill.jpg);
     background-repeat: no-repeat;
 }
    
