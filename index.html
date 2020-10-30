@@ -10,7 +10,7 @@
 <body class="page-body">
 <header class="main-header">
     <div class="main-navigation-wrapper">
-        <div class="logo">
+        <div class="header-top">
             <a class="main-logo"> 
                 <img src="img/logo.svg" width="220" height="47" alt="логотип Техномарт">
             </a>
@@ -28,7 +28,7 @@
                 <p class="store-description"><i>Интернет-магазин строительных материалов и инструментов для ремонта
                 </i></p>
             </div>
-            <div class="information-column-midle">
+            <div class="information-column-middle">
                 <a class="telephone" href="tel:+7 (812) 555-05-55">+7 (812) 555-05-55</a>
                 <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
@@ -53,7 +53,7 @@
 </header>
 <main class="container ">
     <h1>Магазин "Техномарт"</h1>
-    <h2>предложение</h2>
+    <h2 class="visually-hidden">предложение</h2>
     <section class="offer">
         <div class="materials">
                 <h3>Материалы</h3>
@@ -75,27 +75,29 @@
             <h3>Доставка</h3>
             <a class="entry-category" href="blank.html">Бесплатно</a>
         </div>
+    <section class="slider">
         <div class="slide slide-active slide-perforator">
             <h3>Перфораторы</h3>
             <p>Настоящие мужские игрушки</p>
             <a class="open-button" href="сatalog.html">Открыть каталог</a> 
-            <ul class="arrows">
-                <li><button class="arrow-button-prev"></button></li>
-                <li><button class="arrow-button-next"></button></li>  
-            </ul>
-            <ul class="dots">
-                <li><button class="dot-button dot-button-active"></button></li>
-                <li><button class="dot-button"></button></li>
-            </ul> 
         </div>
         <div class="slide slide-drill">
             <h3>Дрели</h3>
             <p>Соседям на радость!</p>
             <a class="open-button" href="сatalog.html">Открыть каталог</a>     
-        </div>          
-    </section>           
+        </div>
+        <ul class="arrows">
+            <li><button class="arrow-button-prev"></button></li>
+            <li><button class="arrow-button-next"></button></li>  
+        </ul>
+        <ul class="dots">
+            <li><button class="dot-button dot-button-active"></button></li>
+            <li><button class="dot-button"></button></li>
+        </ul>           
+    </section> 
+    </section>          
     <section class="product">
-        <div class="popular popular-products">
+        <div class="popular">
             <h2>Популярные товары:</h2>
             <a class="open-button" href="blank.html">Все популярные товары</a>
         </div>
@@ -200,18 +202,18 @@
             <li> <a class="services-link"  href="#">Гарантия</a></li>
             <li> <a class="services-link" href="#">Кредит</a></li>
         </ul>
-        <div class="delivery-method">
+        <div class="delivery-service service-item service-active">
             <h3>Доставка</h3>
             <p>Мы с удовольствием доставим ваш товар прямо 
             к вашему подъезду совершенно бесплатно!
             Ведь мы неплохо заработаем, 
             поднимая его на ваш этаж!</p> 
         </div>
-        <div class="guarantee">
+        <div class="guarantee-service service-item">
             <h3>Гарантия</h3>
             <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгоранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
         </div>
-        <div class="credit">
+        <div class="credit-service service-item">
             <h3>Кредит</h3> 
             <p>Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.</p>
         </div>
@@ -229,7 +231,7 @@
             </ul>
             <a class="open-button" href="blank.html">Подробнее о компании</a>
         </div>
-        <div class="contacts company-column-right">
+        <div class="company-column-right">
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами, 
             заехав в наш офис:</p>
