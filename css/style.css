@@ -29,7 +29,7 @@
     --white-border: #E5E5E5;
 }
 
-.page-body {
+body {
     min-width: 1200px;
     margin: 0;
     padding: 0;
@@ -50,12 +50,45 @@ img {
     height: auto;
 }
 
+.page {
+    height: 100%;
+}
+
+.page-body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
 .main-header {
+    display: grid;
     background-color: var(--basic-light-gray);
+}
+
+.main-navigation-wrapper {
+    width: 940px;
+    display: grid;
+    grid-template-rows: min-content max-content min-content;
+    background-color: var(--basic-light-gray);
+    margin: 0 auto;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 
 .logo {
+    margin: 0;
+    padding: 0;
     font-size: 18px;
     color: var(--basic-white);
     background-color: var(--basic-dark-blue);
@@ -139,6 +172,13 @@ img {
     color: var(--basic-white);
 }
 
+.main-navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 60px;
+}
+
 .main-navigation-list {
     font-size: 18px;
     line-height: 24px;
@@ -150,44 +190,53 @@ img {
     color:var(--basic-white);
 }
 
-.offer-list li {
-    width: 300px;
-    height: 123px;   
+/*main*/
 
+.offer {
+    width: 940px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    padding-bottom: 59px; 
+    margin: 0 auto;
 }
 
-
-.offer-item-materials,
-.offer-item-delivery {
+.materials,
+.delivery {
     background-color: var(--image-orange);
 }
 
-.offer-item-tool {
+.tools {
     background-color: var(--image-blue)
 }
 
-.offer-item-technics {
+.technics {
     background-color: var(--image-violet)
 }
 
-.offer-item-discounts {
+.discounts {
     background-color: var(--image-light-green)
 }
 
-.offer-item-technics a,
-.offer-item-discounts a,
-.offer-item-tool a,
-.offer-item-materials a,
-.offer-item-delivery a {
+.technics a,
+.discounts a,
+.tools a,
+.materials a,
+.odelivery a {
     background-color: var(--white-transparent);
 }
 
-.slider {
+.slide {
     background-color: rgba(0, 0, 0, 0.25);
     color: var(--basic-white);
 }
 
 .slide-perforator {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
     width: 620px;
     height: 266px;
     background-image: url(../img/slide-perforator.jpg);
@@ -195,33 +244,43 @@ img {
 }
 
 .slide-drill {
+    display: none;
     width: 620px;
     height: 266px;
     background-image: url(../img/slide-drill.jpg);
     background-repeat: no-repeat;
 }
    
-.slider .arrows,
-.slider .dots {
+.offer .arrows,
+.offer .dots {
     list-style: none;
 }
 
-.slider h3 {
+.offer h3 {
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
     text-transform: uppercase;
 }
 
-.slider p {
+.offer p {
     font-size: 18px;
 
 }
 
-.slider a {
+.offer a {
     background-color: var(--button-red);
     color: var(--basic-white);
     line-height: 18px;
+}
+
+.popular-products-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 59px;
+    padding-left: 0px;
+    margin: 0 auto;
 }
 
 .products-item {
@@ -313,7 +372,13 @@ img {
 }
 
 .popular-producers-list {
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
     list-style: none;
+    padding-bottom: 70px;
+    padding-left: 0px;
+    margin:0 auto;
 }
 
 .popular-producers-item {
@@ -325,7 +390,25 @@ img {
 }
 
 .services {
+    display: grid;
+    width: 940px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     background-color: var(--basic-light-gray);
+    margin-bottom: 54px;
+}
+
+.services-describe {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.guarantee {
+    display: none;
+}
+
+.credit {
+    display: none;
 }
 
 .services h3 {
@@ -366,6 +449,18 @@ img {
     text-transform: uppercase;
 }
 
+.company {
+    width: 940px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 70px;
+}
+
+.company-column-right {
+    width: 300px;
+    justify-self: end;
+}
+
 .company p,
 .contacts p {
     font-size: 13px;
@@ -378,8 +473,29 @@ img {
     line-height: 24px;
 }
 
+.open-button {
+    width: 300px;
+}
+
 .main-footer {
     background-color: var( --footer-grey-blue);
+}
+
+.footer-container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.footer-row-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+}
+
+.about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .address {
@@ -416,23 +532,29 @@ img {
     color: var(--basic-white);
     font-size: 16px;
     line-height: 18px;
+    padding-left: 1px;
 }
   
-  .social-buttons {
+.social-buttons {
     list-style: none;
+    justify-self: center;
 }
   
-  .social-buttons a {
+.social-buttons a {
     color: var(--basic-white);
 }
-  
-  .feedback p {
+ 
+.feedback {
+    padding-right: 1px;
+}
+
+.feedback p {
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-white);
 }
   
-  .feedback a {
+.feedback a {
     color: var(--navigation-orange);
     font-size: 16px;
     line-height: 18px;
@@ -535,5 +657,3 @@ img {
     border-radius: 50%;
     background: var(--button-red);
 }
-  
-  
