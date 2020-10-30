@@ -68,16 +68,17 @@ img {
 }
 
 .main-header {
-    display: grid;
     background-color: var(--basic-light-gray);
 }
 
 .main-navigation-wrapper {
     width: 940px;
-    display: grid;
-    grid-template-rows: min-content max-content min-content;
     background-color: var(--basic-light-gray);
     margin: 0 auto;
+}
+
+.main-navigation {
+    grid-column: 1/-1;
 }
 
 .information {
@@ -86,7 +87,7 @@ img {
 }
 
 
-.logo {
+.header-top {
     margin: 0;
     padding: 0;
     font-size: 18px;
@@ -192,6 +193,10 @@ img {
 
 /*main*/
 
+.visually-hidden {
+    display: none;
+}
+
 .offer {
     width: 940px;
     display: grid;
@@ -227,26 +232,34 @@ img {
     background-color: var(--white-transparent);
 }
 
-.slide {
-    background-color: rgba(0, 0, 0, 0.25);
-    color: var(--basic-white);
+.arrows,
+.dots {
+    position: absolute;
 }
 
-.slide-perforator {
+.slide {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: var(--basic-white);
+    width: 100%;
+    height: 100%;
+}
+
+.slide-active {
+    display: block;
+}
+
+.slider {
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 4;
-    width: 620px;
-    height: 266px;
     background-image: url(../img/slide-perforator.jpg);
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .slide-drill {
-    display: none;
-    width: 620px;
-    height: 266px;
     background-image: url(../img/slide-drill.jpg);
     background-repeat: no-repeat;
 }
@@ -396,22 +409,26 @@ img {
     grid-template-rows: 1fr 1fr;
     background-color: var(--basic-light-gray);
     margin-bottom: 54px;
+    position: relative;
 }
 
 .services-describe {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column: 1/4;
+    grid-row: 1/2;
 }
 
-.guarantee {
+.service-item {
+    grid-column: 2/4;
+    grid-row: 2/3;
     display: none;
+    position: relative;
 }
 
-.credit {
-    display: none;
+.service-active {
+    display: block;
 }
 
-.services h3 {
+.services h3 { 
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
@@ -442,8 +459,7 @@ img {
     background-color: var(--basic-dark-blue);
 }
 
-.company h2,
-.contacts h2 {
+.company h2 {
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
@@ -482,6 +498,8 @@ img {
 }
 
 .footer-container {
+    grid-template-columns: 1fr 2fr;
+    grid-row: 1fr 1fr;
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
@@ -489,8 +507,12 @@ img {
 
 .footer-row-top {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-column: 1/2;
     margin-top: 0;
+}
+
+.footer-navigation {
+    grid-column: 2/3;
 }
 
 .about-us {
@@ -498,10 +520,11 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.address {
+.address p{
     color: var(--white-address);
     font-size: 18px;
     line-height: 24px;
+    position: absolute;
 }
 
 .site-navigation {
@@ -565,6 +588,34 @@ img {
     font-size: 21px;
     line-height: 21px;
     color: var(--basic-dark);
+    background-color: var(--basic-white);
+}
+
+.telephone {
+    border: 3px solid #FFFFFF;
+    padding: 7px 45px 8px 74px;
+}
+
+.address {
+    color: var(--basic-dark-gray);
+    font-size: 14px;
+    line-height: 24px;
+    position: absolute;
+}
+
+.perforators-list {
+    display: grid;
+    grid-template-columns: 220px 220px 220px;
+    grid-template-rows: 318px 318px 318px;
+    column-gap: 20px;
+    row-gap: 18px;
+    margin-bottom: 48px;
+    margin-right: 0px;
+    position: relative;
+}
+
+.describe {
+    grid-column: 1/3;
 }
 
 .name:hover {
@@ -590,11 +641,35 @@ img {
     color: var(--basic-greylight);
 }
 
+/*main container*/
+
+.page-catalog {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-content: start;
+    margin-bottom: 59px;
+}
+
+.page-catalog .page-title {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+}
+
+.page-title {
+    padding: 29px 739px 30px 29px;
+}
+
+.page-catalog .breadcrumbs {
+    grid-column: 1 / -1;
+    margin-bottom: 20px;
+}
+
 .breadcrumbs {
     list-style: none;
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
+    padding: 0;
 }
   
   .crumb {
@@ -608,6 +683,10 @@ img {
     background-color: var(--basic-light-gray);
 }
   
+.perforators{
+    margin-left: 20px;
+}
+
   .pagination {
     font-size: 13px;
     line-height: 18px;
