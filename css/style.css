@@ -243,10 +243,17 @@ img {
     color: var(--basic-white);
     width: 100%;
     height: 100%;
+    position: absolute;
 }
 
 .slide-active {
     display: block;
+}
+
+.slide-perforator {
+    background-image: url(../img/slide-perforator.jpg);
+    background-repeat: no-repeat;
+
 }
 
 .slider {
@@ -254,9 +261,9 @@ img {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 4;
-    background-image: url(../img/slide-perforator.jpg);
-    background-repeat: no-repeat;
     position: relative;
+    width: 620px;
+    height: 266px;
 }
 
 .slide-drill {
@@ -266,6 +273,7 @@ img {
    
 .offer .arrows,
 .offer .dots {
+    position: absolute;
     list-style: none;
 }
 
