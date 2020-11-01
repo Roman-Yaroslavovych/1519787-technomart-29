@@ -335,18 +335,25 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--basic-orange-light)
 }
 
 .popular h2 {
+    font-size: 30px;
+    line-height: 30px;
+    align-items: center;
+    text-transform: uppercase;
     padding-left: 28px; 
 }
 
 .popular a {
-    padding-top: 11px;
-    padding-left: 39px;
+    font-size: 14px;
+    text-align: center;
     width: 192px;
     height: 38px;
     margin-right: 19px;
+    padding-top: 11px;
+    text-transform: uppercase;
 }
 
 .popular-products-list {
@@ -359,10 +366,34 @@ img {
 }
 
 .products-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-end;
     border: 1px solid var(--producer-borders);
     width: 220px;
     height: 318px;
     list-style: none;
+    margin-top: 20px;
+}
+
+.products-item img {
+
+    margin-top: 6px;
+}
+
+.products-item h3 {
+    text-align: center;
+    order: 2;
+}
+
+.products-item p {
+    text-align: center;
+    order: 3;
+}
+
+.buttons-wrapper {
+    display: none;
 }
 
 .open-button {
@@ -374,36 +405,25 @@ img {
     border: none;
 }
 
-.popular {
-    background-color: var(--basic-orange-light)
-}
-
-.popular h2 {
-    font-size: 30px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-}
-
 .new-price {
+    width: 141px;
     font-weight: bold;
     font-size: 17px;
-    line-height: 18px;
     background-color: var(--button-red);
-    display: flex;
-    align-items: center;
     text-align: center;
     text-transform: uppercase;
 }
 
 .old-price {
+    width: 170px;
     color: var(--old-price-gray);
     font-weight: bold;
     font-size: 17px;
-    line-height: 18px;
     text-decoration: line-through;
     text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 13px;
+  
 }
 
 .buttons-wrapper-buy {
