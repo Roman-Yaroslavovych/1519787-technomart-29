@@ -90,15 +90,13 @@ img {
 
 .header-top {
     display: flex;
-    width: 100%;
-    height: 42px;
     align-items: center;
     margin-bottom: 53px;
+    margin-top: 0;
     font-size: 18px;
     color: var(--basic-white);
     background-color: var(--basic-dark-blue);
 }
-
 
 .search input {
     width: 271px;
@@ -116,7 +114,6 @@ img {
 
 .checkout {
     display: flex;
-    height: 42px;
     width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -125,6 +122,8 @@ img {
 
 .checkout a {
     width: 150px;
+    padding: 9px;
+    padding-bottom: 9px;
     color: var(--basic-white); 
 }
 
@@ -210,11 +209,12 @@ img {
 .main-navigation-list {
     display: flex;
     width: 940px;
-    height: 60px;
     justify-content: space-around;
     align-items: center;
     padding-right: 0;
     padding-left: 0;
+    padding-top: 16px;
+    padding-bottom: 20px;
     font-size: 18px;
     line-height: 24px;
     background-color: var(--basic-dark-gray);
@@ -223,6 +223,7 @@ img {
 }
 
 .main-navigation-list a {
+    height: auto;
     color:var(--basic-white);
 }
 
@@ -349,7 +350,6 @@ img {
 .popular a {
     font-size: 14px;
     text-align: center;
-    width: 192px;
     height: 38px;
     margin-right: 19px;
     padding-top: 11px;
@@ -377,19 +377,22 @@ img {
     margin-top: 20px;
 }
 
-.products-item img {
-
+.product-item-image {
+    display: flex;
+    align-content: center;
+    width: 164px;
+    height: 138px;
     margin-top: 6px;
 }
 
 .products-item h3 {
     text-align: center;
-    order: 2;
+
 }
 
 .products-item p {
     text-align: center;
-    order: 3;
+
 }
 
 .buttons-wrapper {
@@ -654,11 +657,15 @@ img {
     list-style: none;
     justify-self: center;
 }
+
+.social-buttons li {
+    margin-right: 1px;
+}
   
 .social-buttons a {
+    display: block;
     width: 44px;
     height: 44px;
-    padding-right: 1px;
     color: var(--basic-white);
 }
  
