@@ -275,21 +275,25 @@ img {
 
 .slide {
     display: none;
-    background-color: rgba(0, 0, 0, 0.25);
     color: var(--basic-white);
     width: 100%;
     height: 100%;
+    padding-left: 24px;
+    margin-left: 0;
 }
 
 .slide h3 {
-    margin: 0;
-    padding-left: 24px;
     padding-top: 23px;
-    padding-bottom: 5px;
+    margin-bottom: 5px;
+    margin-top: 0;
 }
 .slide p {
-    padding-left: 24px;
-    padding-bottom: 113px;
+    margin-bottom: 117px;
+    margin-top: 0;
+}
+
+.slide a {
+    margin-bottom: 27px;
 }
 
 .slide-active {
@@ -310,6 +314,7 @@ img {
     position: relative;
     width: 620px;
     height: 266px;
+    padding: 0;
 }
 
 .slide-drill {
@@ -693,6 +698,7 @@ img {
     font-size: 16px;
     line-height: 18px;
 }
+
 /*catalog*/
 
 .name {
@@ -746,9 +752,15 @@ img {
 }
 
 .area-item {
-    padding-left: 0;
-    padding-right: 45px;
     color: var(--basic-dark-gray);
+}
+
+.login-area li {
+    margin-right: 43px;
+}
+
+.login-area li:last-child {
+    margin-right: 0;
 }
 
 .area-item:hover {
@@ -793,7 +805,7 @@ img {
 }
   
   .crumb {
-    padding-left: 42px;
+    margin-left: 42px;
     color: var(--basic-dark);
 }
   
@@ -804,7 +816,7 @@ img {
     background-color: var(--basic-light-gray);
 }
   
-    .perforators{
+    .products {
     margin-left: 20px;
 }
 
@@ -815,7 +827,7 @@ img {
     list-style: none;
 }
     .pagination li{
-        padding-left: 10px;
+        margin-right: 10px;
     }
 
   
