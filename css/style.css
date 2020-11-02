@@ -279,7 +279,17 @@ img {
     color: var(--basic-white);
     width: 100%;
     height: 100%;
-    position: absolute;
+}
+
+.slide h3 {
+    margin: 0;
+    padding-left: 24px;
+    padding-top: 23px;
+    padding-bottom: 5px;
+}
+.slide p {
+    padding-left: 24px;
+    padding-bottom: 113px;
 }
 
 .slide-active {
@@ -379,7 +389,7 @@ img {
 
 .product-item-image {
     display: flex;
-    align-content: center;
+    align-items: center;
     width: 164px;
     height: 138px;
     margin-top: 6px;
@@ -400,6 +410,8 @@ img {
 }
 
 .open-button {
+    width: 192px;
+    height: 38px;
     font: inherit;
     text-align: center;
     background-color: var(--button-red);
@@ -574,9 +586,6 @@ img {
     line-height: 24px;
 }
 
-.open-button {
-    width: 300px;
-}
 
 /*footer*/
 
@@ -687,11 +696,15 @@ img {
 /*catalog*/
 
 .name {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 59px;
     font-size: 21px;
     line-height: 21px;
     color: var(--basic-dark);
     background-color: var(--basic-white);
 }
+
 
 .telephone {
     border: 3px solid #FFFFFF;
@@ -725,12 +738,16 @@ img {
 }
 
 .login-area {
+    display: flex;
+    padding-left: 44px;
     list-style: none;
     font-size: 16px;
     line-height: 18px;
 }
 
 .area-item {
+    padding-left: 0;
+    padding-right: 45px;
     color: var(--basic-dark-gray);
 }
 
@@ -767,6 +784,7 @@ img {
 }
 
 .breadcrumbs {
+    display: flex;
     list-style: none;
     font-size: 13px;
     line-height: 18px;
@@ -775,6 +793,7 @@ img {
 }
   
   .crumb {
+    padding-left: 42px;
     color: var(--basic-dark);
 }
   
@@ -785,15 +804,20 @@ img {
     background-color: var(--basic-light-gray);
 }
   
-.perforators{
+    .perforators{
     margin-left: 20px;
 }
 
   .pagination {
+    display: flex;
     font-size: 13px;
     line-height: 18px;
     list-style: none;
 }
+    .pagination li{
+        padding-left: 10px;
+    }
+
   
   .pagination a {
     color: var(--basic-dark);
