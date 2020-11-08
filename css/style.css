@@ -534,11 +534,26 @@ img {
 
 .dots {
     position: absolute;
-    padding: 0;
-    margin: 0;
-    top: 200px;
+    width: 30px;
+    display: flex;
+    justify-content: space-between;
+    top: 196px;
     left: 295px;
-    transform: rotate(90deg);
+    text-align: center;
+}
+
+.dots button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    background-color: var(--basic-white);
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.dots .dot-button-active {
+    background-color: var(--button-red);
+    border: 2px solid var(--basic-white);
 }
 
 .arrow-button-prev{
@@ -563,20 +578,6 @@ img {
     background-color: transparent;
     top: 120px;
     left: 581px;
-}
-
-.dot-button {
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    background-color: var(--basic-white);
-    border: transparent;
-    border-radius: 50%;
-}
-
-.dot-button-active {
-    background-color: var(--button-red);
-    border: 2px solid var(--basic-white);
 }
 
 .slide {
@@ -847,29 +848,56 @@ img {
     background-position: right;
 }
 
-.guarantee-service::after {
-    content: "";
-    position: absolute;
-    width: 389px;
-    height: 283px;
-    background-image: url(../img/guaranted-symbol.png);
-    background-repeat: no-repeat;
-    right: -230px;
-    top: 60px;
+.delivery-service h3 {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
-.credit-service::after {
-    content: "";
-    position: absolute;
-    width: 465px;
-    height: 285px;
+.delivery-service p {
+    width: 300px;
+    margin-right: 300px;
+    margin-top: 0;
+}
+
+.guarantee-service {
+    background-image: url(../img/guaranted-symbol.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.guarantee-service h3 {
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+.guarantee-service p {
+    width: 331px;
+    padding-bottom: 0;
+    margin-bottom: 108px;
+    margin-top: 0;
+}
+
+.credit-service {
     background-image: url(../img/credit-symbol.png);
     background-repeat: no-repeat;
-    right: -230px;
-    top: 60px;
+    background-position: right;
+}
+
+.credit-service h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.credit-service p {
+    width: 309px;
+    padding: 0;
+    margin-bottom: 27px;
+    margin-top: 0;
 }
 
 .credit-button {
+    display: inline-block;
     font-family: Cuprum;
     font-size: 14px;
     line-height: 18px;
@@ -878,7 +906,7 @@ img {
     background-color: var(--red-credit-button);
     padding: 10px 45px;
     border-radius: 2px;
-    padding-bottom: 105px;
+    margin-bottom: 114px;
 }
 
 .service-active {
@@ -895,11 +923,6 @@ img {
     font-family: PT Sans; 
     font-size: 13px;
     line-height: 24px;
-}
-
-.delivery-service p {
-    width: 300px;
-    margin-right: 300px;
 }
 
 .services-list {
@@ -1011,7 +1034,6 @@ img {
     top: 12px;
     left: -37px;
 }
-
 
 /*footer*/
 
