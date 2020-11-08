@@ -110,7 +110,6 @@ img {
 .information {
     width: 940px;
     display: grid;
-    height: 158px;
     grid-template-columns: 1fr 1fr 1fr;
     padding-top: 46px;
     padding-bottom: 0px;
@@ -134,6 +133,10 @@ img {
     position: relative;
 }
 
+.search input::placeholder {
+    color: var(--basic-white);
+}
+
 .search input {
     background-color: var(--basic-dark-blue);
     display: block;
@@ -141,7 +144,14 @@ img {
     line-height: 24px;
     padding: 9px 0 9px 43px;
     margin: 0;
-    border: none;
+    border-style: none;
+}
+
+.search input:active + .icon-search path {
+    color: var(--button-red);
+    background-color: var(--basic-white);
+    fill: var(--button-red);
+    opacity: 1;
 }
 
 .icon-search {
@@ -153,9 +163,6 @@ img {
     left: 17px;
 }
 
-.icon-search:hover path {
-    fill: var(--button-red);
-}
 
 .main-logo {
     width: 108px;
@@ -176,10 +183,8 @@ img {
     padding-left: 0;
 }
 
-.checkout .marks,
-          .basket {
+.checkout li {
     position: relative;
-
 }
 
 .marks::before {
@@ -374,6 +379,7 @@ img {
     list-style: none;
     padding: 0;
     margin-bottom: 60px;
+    margin-top: 40px;
     position: relative;
 }
 
@@ -451,14 +457,18 @@ img {
     right: 43px;
 }
 
-.new-offer::after {
+.new {
+    position: relative;
+}
+
+.new::before {
     content: "";
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background-image: url(../img/product-new.svg);
     background-repeat: no-repeat;
-    right: -30px;
+    right: 0px;
     top: 0px;
 }
 
@@ -518,8 +528,17 @@ img {
 }
 
 .arrows,
+.dots  {
+    list-style: none;
+}
+
 .dots {
     position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 200px;
+    left: 295px;
+    transform: rotate(90deg);
 }
 
 .arrow-button-prev{
@@ -530,7 +549,7 @@ img {
     height: 39px;
     background-repeat: no-repeat;
     background-color: transparent;
-    top: -154px;
+    top: 120px;
     left: 24px;
 }
 
@@ -542,32 +561,22 @@ img {
     height: 39px;
     background-repeat: no-repeat;
     background-color: transparent;
-    top: -154px;
+    top: 120px;
     left: 581px;
 }
 
 .dot-button {
-    position: absolute;
     width: 10px;
     height: 10px;
     padding: 0;
     background-color: var(--basic-white);
     border: transparent;
     border-radius: 50%;
-    top: -60px;
-    left: 300px;
 }
 
 .dot-button-active {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    padding: 0;
     background-color: var(--button-red);
     border: 2px solid var(--basic-white);
-    border-radius: 50%;
-    top: -60px;
-    left: 315px; 
 }
 
 .slide {
@@ -615,12 +624,6 @@ img {
     background-repeat: no-repeat;
 }
    
-.offer .arrows,
-.offer .dots {
-    position: absolute;
-    list-style: none;
-}
-
 .offer p {
     font-size: 18px;
 
@@ -669,20 +672,6 @@ img {
     margin-top: 20px;
 }
 
-.new {
-    position: relative;
-}
-
-.new::after {
-    content: "";
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-image: url(../img/product-new.svg);
-    background-repeat: no-repeat;
-    right: -30px;
-}
-
 .products-item {
     display: flex;
     flex-wrap: wrap;
@@ -704,12 +693,10 @@ img {
 
 .products-item h3 {
     text-align: center;
-
 }
 
 .products-item p {
     text-align: center;
-
 }
 
 .buttons-wrapper {
@@ -731,11 +718,13 @@ img {
 
 .new-price {
     width: 141px;
+    color: var(--basic-white);
     font-weight: bold;
     font-size: 17px;
-    background-color: var(--button-red);
+    background-image: url(../img/red-button.svg);
     text-align: center;
     text-transform: uppercase;
+    background-position: center;
 }
 
 .old-price {
@@ -746,8 +735,7 @@ img {
     text-decoration: line-through;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 13px;
-  
+    margin-bottom: 13px; 
 }
 
 .buttons-wrapper-buy {
@@ -809,7 +797,7 @@ img {
 }
 
 .services {
-    min-width: 100%;
+    width: 100%;
     background-color: var(--basic-light-gray);
 }
 
@@ -834,21 +822,29 @@ img {
     grid-row: 1/2;
 }
 
+.services-describe h3 {
+    margin-top: 64px;
+    margin-bottom: 25px;
+}
+
+.services-describe p {
+    width: 397px;
+    margin: 0;
+    padding: 0;
+}
+
 .service-item {
     grid-column: 2/4;
     grid-row: 2/3;
     display: none;
     position: relative;
+    margin-right: 0;
 }
 
 .delivery-service {
-    position: relative;
     background-image: url(../img/delivery-symbol.png);
     background-repeat: no-repeat;
-}
-
-.guarantee-service {
-    position: relative;
+    background-position: right;
 }
 
 .guarantee-service::after {
@@ -860,10 +856,6 @@ img {
     background-repeat: no-repeat;
     right: -230px;
     top: 60px;
-}
-
-.credit-service {
-    position: relative;
 }
 
 .credit-service::after {
@@ -905,19 +897,15 @@ img {
     line-height: 24px;
 }
 
-.services-describe p {
-    width: 397px;
- 
-}
-
 .delivery-service p {
     width: 300px;
+    margin-right: 300px;
 }
 
 .services-list {
-    margin-bottom: 99px;
     padding-left: 0;
     padding-right: 0;
+    margin: 0 80px 99px 0;
 }
 
 .services-list li {
@@ -1032,11 +1020,14 @@ img {
 }
 
 .footer-container {
-    grid-template-columns: 1fr 2fr;
-    grid-row: 1fr 1fr;
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
+}
+
+.bottom-container {
+    min-width: 1200px;
+    background-color: var(--basic-dark-blue);
 }
 
 .footer-row-top {
@@ -1116,8 +1107,8 @@ img {
     color: var(--navigation-orange);
 }
 
-.about-us p {
-    display: inline;
+.all-rights {
+    display: block;
     width: 227px;
     color: var(--basic-white);
     font-size: 16px;
@@ -1130,7 +1121,6 @@ img {
   
 .social-button {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 44px;
@@ -1150,39 +1140,43 @@ img {
     padding-left: 0;
 }
    
-  .social-button:hover {
-    border-radius: 50%;
+.social-button:hover {
     background: var(--button-red);
 }
   
-  .social-button:active {
-    border-radius: 50%;
+.social-button:active {
     background: var(--button-red);
 }
 
 .feedback {
     display: flex;
     justify-content: space-between;
-    padding-right: 0;
     margin-top: 35px;
     margin-bottom: 35px;
     padding: 0;
 }
 
 .feedback p {
-    text-align: center;
-    max-width: 137px;
+    font-family: Cuprum;
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-white);
-    padding: 1px;
+    padding: 0;
     margin: 0 51px 0 0;
 }
 
 .feedback p:last-child {
     margin-right: 0;
 }
-  
+
+.mail {
+    width: 137px;
+}
+
+.designed {
+    width: 98px;
+}
+
 .feedback a {
     color: var(--navigation-orange);
     font-size: 16px;
@@ -1312,6 +1306,7 @@ img {
     line-height: 18px;
     list-style: none;
 }
+
 .pagination li{
     margin-right: 10px;
 }
