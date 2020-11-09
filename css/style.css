@@ -30,6 +30,7 @@
     --white-border: #E5E5E5;
     --grey-icons: #3D546F;
     --basic-greylight: #C5C5C5;
+    --basic-extara-dark-blue: #1D2739;
 }
 
 body {
@@ -428,12 +429,9 @@ img {
     width: 940px;
     justify-content: space-around;
     align-items: center;
-    padding-right: 0;
-    padding-left: 0;
-    padding-top: 16px;
-    padding-bottom: 20px;
     margin-bottom: 60px;
     margin-top: 0;
+    padding: 0;
     font-size: 18px;
     line-height: 24px;
     background-color: var(--basic-dark-gray);
@@ -441,8 +439,24 @@ img {
     list-style: none;
 }
 
+.main-navigation-list a:hover {
+    background-color: var(--basic-dark-blue);
+}
+
+.main-navigation-list a:active {
+    color: rgba(255, 255, 255, 0.5);
+    background-color: var(--basic-extara-dark-blue) ;
+}
+
+
+
 .main-navigation-list a {
-    height: auto;
+    width: 134px;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 20px;
     color:var(--basic-white);
 }
 
@@ -1294,12 +1308,28 @@ img {
     margin-right: 0;
 }
 
+.name:hover {
+    color: var(--basic-dark);
+}
+
+.name:active {
+    color: var(--basic-greylight);
+}
+
 .name:hover .icon-user path {
     fill: var(--grey-icons);
 }
 
+.name:active .icon-user path {
+    fill: var(--basic-greylight)
+}
+
 .name:hover .login-icon path {
     fill: var(--grey-icons);
+}
+
+.name:active .login-icon path {
+    fill: var(--basic-greylight);
 }
 
 .icon-user {
@@ -1326,10 +1356,6 @@ img {
 
 .describe {
     grid-column: 1/3;
-}
-
-.name:hover {
-    color: var(--basic-dark);
 }
 
 .login-area {
@@ -1371,7 +1397,10 @@ img {
     background-color: var(--button-red);
 }
 
-.name:active,
+.my-orders:active::after {
+    background-color: var(--basic-greylight);
+}
+
 .area-item:active {
     color: var(--basic-greylight);
 }
