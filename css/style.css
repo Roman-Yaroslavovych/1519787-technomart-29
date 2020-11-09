@@ -29,6 +29,7 @@
     --basic-greylight: #C5C5C5;
     --white-border: #E5E5E5;
     --grey-icons: #3D546F;
+    --basic-greylight: #C5C5C5;
 }
 
 body {
@@ -367,6 +368,10 @@ img {
     color: var(--button-red);
 }
 
+.button-registration:active {
+    color: var(--basic-greylight);
+}
+
 .button-enter {
     padding-left: 45px;
     padding-right: 27px;
@@ -389,6 +394,14 @@ img {
 .button-enter:hover path {
     fill: var(--grey-icons);
 }
+
+.button-enter:active {
+    color: var(--basic-greylight);
+}
+
+.button-enter:active path {
+    fill: var(--basic-greylight);
+} 
 
 .offer-list {
     font-size: 24px;
@@ -1279,6 +1292,14 @@ img {
     color: var(--basic-dark);
     background-color: var(--basic-white);
     margin-right: 0;
+}
+
+.name:hover .icon-user path {
+    fill: var(--grey-icons);
+}
+
+.name:hover .login-icon path {
+    fill: var(--grey-icons);
 }
 
 .icon-user {
